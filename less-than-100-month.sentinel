@@ -6,6 +6,6 @@ import "decimal"
 
 main = rule {
 #    delta_monthly_cost.less_than(100)
-     decimal.new(delta_montly_cost).less_than(100)
+     decimal.new(delta_monthly_cost).less_than(100)
 }
 
