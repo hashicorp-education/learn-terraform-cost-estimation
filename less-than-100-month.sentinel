@@ -2,8 +2,7 @@ import "tfrun"
 import "decimal"
 import "types"
 
-test = tfrun.cost_estimate.delta_monthly_cost
-if test is null {
+if tfrun.cost_estimate is not null and tfrun.cost_estimate.delta_monthly_cost is not null {
     delta_monthly_cost = decimal.new(0)
 } else {
     delta_monthly_cost = decimal.new(tfrun.cost_estimate.delta_monthly_cost)
@@ -16,4 +15,3 @@ if delta_monthly_cost.greater_than(100) {
 main = rule {
     delta_monthly_cost.less_than(100)
 }
-
