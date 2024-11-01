@@ -1,9 +1,5 @@
 import "tfrun"
 import "decimal"
-import "types"
-
-#delta_monthly_cost = decimal.new(tfrun.cost_estimate.delta_monthly_cost)
-
 
 if tfrun.cost_estimate.delta_monthly_cost is null {
     delta_monthly_cost = decimal.new(0)
